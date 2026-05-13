@@ -1,3 +1,13 @@
 {
-  "outputDirectory": "public"
+  "version": 2,
+  "builds": [
+    { "src": "api/lead.js",     "use": "@vercel/node" },
+    { "src": "api/products.js", "use": "@vercel/node" },
+    { "src": "public/**",       "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/lead",     "dest": "/api/lead.js" },
+    { "src": "/api/products", "dest": "/api/products.js" },
+    { "src": "/(.*)",         "dest": "/public/$1" }
+  ]
 }
