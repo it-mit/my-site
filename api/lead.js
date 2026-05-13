@@ -1,3 +1,5 @@
+const https = require('https');
+
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID   = process.env.TELEGRAM_CHAT_ID;
 
@@ -28,13 +30,8 @@ function buildMessage(lead) {
     });
   }
 
-  if (lead.total) {
-    lines.push('', `<b>Сумма:</b> ${escapeHtml(lead.total)}`);
-  }
-
-  if (lead.page) {
-    lines.push('', `<b>Страница:</b> ${escapeHtml(lead.page)}`);
-  }
+  if (lead.total) lines.push('', `<b>Сумма:</b> ${escapeHtml(lead.total)}`);
+  if (lead.page)  lines.push('', `<b>Страница:</b> ${escapeHtml(lead.page)}`);
 
   const ts = lead.createdAt || lead.date || new Date().toISOString();
   lines.push(`<b>Дата:</b> ${escapeHtml(ts)}`);
@@ -42,30 +39,45 @@ function buildMessage(lead) {
   return lines.join('\n');
 }
 
-async function sendTelegramLead(lead) {
-  const url  = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-  const body = JSON.stringify({
-    chat_id:    TELEGRAM_CHAT_ID,
-    text:       buildMessage(lead),
-    parse_mode: 'HTML',
+function sendTelegramLead(lead) {
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify({
+      chat_id:    TELEGRAM_CHAT_ID,
+      text:       buildMessage(lead),
+      parse_mode: 'HTML',
+    });
+
+    const req = https.request({
+      hostname: 'api.telegram.org',
+      path:     `/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+      method:   'POST',
+      headers: {
+        'Content-Type':   'application/json',
+        'Content-Length': Buffer.byteLength(body),
+      },
+    }, res => {
+      let raw = '';
+      res.on('data', chunk => { raw += chunk; });
+      res.on('end', () => {
+        try {
+          const result = JSON.parse(raw);
+          if (!result.ok) reject(new Error(result.description || 'Telegram API error'));
+          else resolve(result);
+        } catch {
+          reject(new Error('Invalid Telegram response'));
+        }
+      });
+    });
+
+    req.on('error', reject);
+    req.write(body);
+    req.end();
   });
-
-  const res = await fetch(url, {
-    method:  'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body,
-  });
-
-  const result = await res.json();
-
-  if (!result.ok) {
-    throw new Error(result.description || 'Telegram API error');
-  }
-
-  return result;
 }
 
 module.exports = async (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+
   if (req.method !== 'POST') {
     return res.status(405).json({ success: false, message: 'Method not allowed' });
   }
