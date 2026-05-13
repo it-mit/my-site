@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>О компании — Пиломатериалы от производителя</title>
+  <meta name="description" content="О компании «Пиломатериалы»: более 10 лет производства и продажи доски, бруса, вагонки, OSB. Собственное производство, контроль качества, 5000+ довольных клиентов." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.ru/about.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.ru/about.html" />
+  <meta property="og:title" content="О компании — Пиломатериалы от производителя" />
+  <meta property="og:description" content="Более 10 лет производства пиломатериалов. Собственное производство, 5000+ клиентов, доставка по всей России." />
+  <meta property="og:image" content="https://static.tildacdn.com/tild3361-6639-4364-b866-646135366230/___-_2026-05-11T1515.png" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="Пиломатериалы" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500;600;700;800&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ HEADER -->
+<header id="header">
+  <div class="header-top">
+    <div class="container">
+      <a href="/" class="header-brand" style="display:inline-block">ПИЛОМАТЕРИАЛЫ</a>
+    </div>
+  </div>
+  <div class="header-nav-wrap" id="headerNavWrap">
+    <div class="container header-nav-inner">
+      <div class="header-nav-left">
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+          <span></span>
+        </button>
+        <nav class="main-nav" id="mainNav" aria-label="Главная навигация">
+          <a href="/#catalog">Каталог</a>
+          <a href="/about.html" aria-current="page">О компании</a>
+          <a href="/#delivery">Доставка и оплата</a>
+          <a href="/#wholesale">Оптовикам</a>
+          <a href="/#reviews">Отзывы</a>
+          <a href="/#contacts">Контакты</a>
+        </nav>
+      </div>
+      <div class="header-nav-right">
+        <div class="header-phone-box">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.8 3.7 9 3.2c.9-.2 1.8.3 2.1 1.1l.9 2.2c.3.7.1 1.5-.5 2l-1.1.9c.9 1.9 2.4 3.4 4.2 4.3l1-.9c.6-.5 1.4-.7 2.1-.3l2.1 1c.8.4 1.2 1.2 1 2.1l-.5 2.1c-.2.9-1 1.5-1.9 1.5C10.6 19.2 4.8 13.4 4.8 5.6c0-.9.7-1.7 2-1.9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <a class="header-phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+            <span class="header-worktime">Ежедневно с 8:00 до 20:00</span>
+          </div>
+        </div>
+        <button class="btn btn-dark js-open-lead" data-source="Заказать звонок">Заказать звонок</button>
+        <button class="icon-btn" id="searchBtn" aria-label="Поиск">
+          <svg viewBox="0 0 24 24" fill="none"><path d="m20 20-4.35-4.35M18 10.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Корзина">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 5h2.2l1.6 9.4c.2 1 1 1.7 2 1.7h5.8c1 0 1.8-.6 2-1.6L20 8H8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.4 20.2h.1M17.2 20.2h.1" stroke-width="3" stroke-linecap="round"/></svg>
+          <span class="cart-count hidden" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav">
+      <a href="/#catalog">Каталог</a>
+      <a href="/about.html">О компании</a>
+      <a href="/#delivery">Доставка и оплата</a>
+      <a href="/#wholesale">Оптовикам</a>
+      <a href="/#reviews">Отзывы</a>
+      <a href="/#contacts">Контакты</a>
+    </nav>
+    <div class="mobile-contact">
+      <a href="tel:+70000000000">+7 (000) 000-00-00</a>
+      <span>Ежедневно с 8:00 до 20:00</span>
+      <button class="btn btn-dark js-open-lead w-full" data-source="Мобильное меню">Заказать звонок</button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════ PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://static.tildacdn.com/tild3033-6635-4363-b465-333962396236/___-_2026-05-11T1528.png')"></div>
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="page-hero-content container">
+    <nav class="page-breadcrumb" aria-label="Хлебные крошки">
+      <a href="/">Главная</a>
+      <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>О компании</span>
+    </nav>
+    <h1 class="page-hero-title">О компании</h1>
+    <p class="page-hero-sub">Производим и поставляем качественные пиломатериалы с 2013 года</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ STORY -->
+<section class="about-story-section">
+  <div class="container">
+    <div class="about-story-grid reveal">
+      <div class="about-story-text">
+        <h2>Более 10 лет<br>на рынке пиломатериалов</h2>
+        <p>Компания «Пиломатериалы» основана в 2013 году и с первых дней специализируется на производстве и оптово-розничной продаже пиломатериалов. За это время мы выстроили полный производственный цикл — от заготовки древесины до отгрузки готовой продукции.</p>
+        <p>Мы работаем как с частными застройщиками, так и с крупными строительными организациями. Широкий ассортимент, прозрачное ценообразование и строгий контроль качества на каждом этапе — вот что отличает нас от посредников.</p>
+        <p>Наш склад расположен в Москве, а логистическая сеть охватывает все регионы России. Доставляем точно в срок, сохраняя товарный вид продукции.</p>
+        <a href="/#catalog" class="link-more" style="margin-top:8px;display:inline-flex;align-items:center;gap:8px;">
+          Перейти в каталог
+          <svg viewBox="0 0 24 24" fill="none" style="width:18px;height:18px;stroke:currentColor"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="about-story-img">
+        <img src="https://static.tildacdn.com/tild6632-3939-4466-b563-636530393439/___-_2026-05-11T1631.png" alt="Производство пиломатериалов" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ STATS -->
+<section class="about-stats-section">
+  <div class="container">
+    <div class="stats-grid reveal">
+      <div class="stat-card"><strong>10+</strong><span>лет на рынке</span></div>
+      <div class="stat-card"><strong>5000+</strong><span>довольных клиентов</span></div>
+      <div class="stat-card"><strong>200+</strong><span>наименований в каталоге</span></div>
+      <div class="stat-card"><strong>98%</strong><span>положительных отзывов</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ VALUES -->
+<section class="about-values-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title">Наши преимущества</h2>
+    </div>
+    <div class="about-values-grid">
+
+      <article class="value-card reveal">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 5 9.5h3v6h8v-6h3L12 3Z" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 21h4" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Собственное производство</h3>
+        <p>Полный производственный цикл под одной крышей — от распиловки бревна до упаковки готовых изделий. Никаких посредников и накруток.</p>
+      </article>
+
+      <article class="value-card reveal">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5 19 6v5.4c0 4.3-2.7 7.7-7 9.1-4.3-1.4-7-4.8-7-9.1V6l7-2.5Z" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.8 12 2 2 4.4-4.6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Гарантия качества</h3>
+        <p>Вся продукция соответствует ГОСТ и ТУ. Каждая партия проходит входной контроль и проверку перед отгрузкой. Сертификаты по запросу.</p>
+      </article>
+
+      <article class="value-card reveal">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3.5 7.5h11v9h-11v-9ZM14.5 10h3.8l2.2 2.8v3.7h-6V10Z" stroke-width="1.7" stroke-linejoin="round"/><path d="M7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM17.7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke-width="1.7"/></svg>
+        </div>
+        <h3>Доставка по всей России</h3>
+        <p>Работаем с надёжными транспортными компаниями. Доставляем в любой регион в согласованные сроки, с бережной упаковкой материала.</p>
+      </article>
+
+      <article class="value-card reveal">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 7h10M7 12h10M7 17h6" stroke-width="1.7" stroke-linecap="round"/><path d="M19.5 4.5v15h-15v-15h15Z" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Выгодные цены</h3>
+        <p>Прямые поставки от производителя позволяют предлагать оптовые цены розничным покупателям. Гибкая система скидок при больших объёмах.</p>
+      </article>
+
+      <article class="value-card reveal">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M8 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM16 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke-width="1.7"/><path d="M3.5 20c.6-3 2.3-5 4.5-5s3.9 2 4.5 5M11.5 20c.6-3 2.3-5 4.5-5s3.9 2 4.5 5" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Индивидуальный подход</h3>
+        <p>Менеджер поможет подобрать нужное сечение и объём под ваш проект. Консультируем бесплатно — от частного домика до крупного объекта.</p>
+      </article>
+
+      <article class="value-card reveal">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke-width="1.7"/><path d="M12 7.2v5.2l3.4 2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Работаем без выходных</h3>
+        <p>Принимаем заявки и консультируем ежедневно с 8:00 до 20:00. Ответ на запрос — в течение 15 минут в рабочее время.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ GALLERY -->
+<section class="about-gallery-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title">Наша продукция</h2>
+    </div>
+    <div class="about-gallery-grid">
+      <div class="gallery-item gallery-item--tall reveal">
+        <img src="https://static.tildacdn.com/tild3638-6664-4332-b937-376662626539/1_2.png" alt="Доска обрезная" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://static.tildacdn.com/tild6661-3334-4331-b130-613033613336/1_3.png" alt="Брус" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://static.tildacdn.com/tild6361-6365-4535-b563-363431613834/1_4.png" alt="Вагонка" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://static.tildacdn.com/tild3432-3432-4630-b065-623631643638/1_5.png" alt="Плита OSB" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://static.tildacdn.com/tild3264-3633-4266-b038-653433336131/1_6.png" alt="Террасная доска" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://static.tildacdn.com/tild3464-6130-4264-b830-363833386137/___-_2026-05-12T1359.png" alt="Обрезная доска 50×150" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://static.tildacdn.com/tild6364-6638-4532-b565-333737366138/___1.png" alt="Строганная доска" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ CTA -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-box reveal" style="background-image:url('https://static.tildacdn.com/tild6563-6232-4435-a630-643832346536/___-_2026-05-11T1613.png')">
+      <div class="cta-overlay" aria-hidden="true"></div>
+      <div class="cta-main">
+        <h2>Нужен расчёт стоимости?</h2>
+        <p>Отправьте заявку и получите расчёт в течение 15 минут.</p>
+        <button class="btn btn-white js-open-lead" data-source="CTA О компании">Получить расчёт</button>
+      </div>
+      <div class="cta-items">
+        <article class="cta-item">
+          <div class="cta-item-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 20h10M8 17h8M6 9.5 12 4l6 5.5v7.5H6V9.5Z" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 13h4" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Быстрый расчёт</h3>
+          <p>Ответ от специалиста в течение 15 минут</p>
+        </article>
+        <article class="cta-item">
+          <div class="cta-item-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM16 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke-width="1.7"/><path d="M3.5 20c.6-3 2.3-5 4.5-5s3.9 2 4.5 5M11.5 20c.6-3 2.3-5 4.5-5s3.9 2 4.5 5" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Индивидуальный подход</h3>
+          <p>Подберём оптимальное решение под ваш проект</p>
+        </article>
+        <article class="cta-item">
+          <div class="cta-item-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 6h10M7 11h10M7 16h7" stroke-width="1.7" stroke-linecap="round"/><path d="M4.5 3.5h15v17h-15v-17Z" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Выгодные условия</h3>
+          <p>Гибкая система скидок для оптовых клиентов</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ CONTACTS + FOOTER -->
+<div id="lwcf26">
+
+  <section class="lwcf26-contacts" id="contacts">
+    <div class="lwcf26-wrap">
+      <div class="lwcf26-contacts-block reveal">
+        <div class="lwcf26-contact-content">
+          <h2 class="lwcf26-section-title">Контакты</h2>
+          <div class="lwcf26-contact-list">
+            <div class="lwcf26-contact-row">
+              <div class="lwcf26-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M6.8 3.7 9 3.2c.9-.2 1.8.3 2.1 1.1l.9 2.2c.3.7.1 1.5-.5 2l-1.1.9c.9 1.9 2.4 3.4 4.2 4.3l1-.9c.6-.5 1.4-.7 2.1-.3l2.1 1c.8.4 1.2 1.2 1 2.1l-.5 2.1c-.2.9-1 1.5-1.9 1.5C10.6 19.2 4.8 13.4 4.8 5.6c0-.9.7-1.7 2-1.9Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <span class="lwcf26-contact-label">Телефон</span>
+                <a class="lwcf26-contact-value" href="tel:+70000000000">+7 (000) 000-00-00</a>
+              </div>
+            </div>
+            <div class="lwcf26-contact-row">
+              <div class="lwcf26-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 6.5h16v11H4v-11Z" stroke-width="1.8" stroke-linejoin="round"/><path d="m5 7.5 7 5.7 7-5.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <span class="lwcf26-contact-label">Email</span>
+                <a class="lwcf26-contact-value" href="mailto:info@pilomaterialy.ru">info@pilomaterialy.ru</a>
+              </div>
+            </div>
+            <div class="lwcf26-contact-row">
+              <div class="lwcf26-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s6.5-5.7 6.5-11.1A6.5 6.5 0 0 0 5.5 9.9C5.5 15.3 12 21 12 21Z" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 12.2a2.4 2.4 0 1 0 0-4.8 2.4 2.4 0 0 0 0 4.8Z" stroke-width="1.8"/></svg>
+              </div>
+              <div>
+                <span class="lwcf26-contact-label">Адрес</span>
+                <span class="lwcf26-contact-value lwcf26-address-one-line">Москва, Тверская улица, 7</span>
+              </div>
+            </div>
+            <div class="lwcf26-contact-row">
+              <div class="lwcf26-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke-width="1.8"/><path d="M12 7.2v5.2l3.4 2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <span class="lwcf26-contact-label">Режим работы</span>
+                <span class="lwcf26-contact-value">Ежедневно с 8:00 до 20:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="lwcf26-contact-actions">
+            <a class="lwcf26-contact-btn lwcf26-contact-btn--dark" href="tel:+70000000000">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.8 3.7 9 3.2c.9-.2 1.8.3 2.1 1.1l.9 2.2c.3.7.1 1.5-.5 2l-1.1.9c.9 1.9 2.4 3.4 4.2 4.3l1-.9c.6-.5 1.4-.7 2.1-.3l2.1 1c.8.4 1.2 1.2 1 2.1l-.5 2.1c-.2.9-1 1.5-1.9 1.5C10.6 19.2 4.8 13.4 4.8 5.6c0-.9.7-1.7 2-1.9Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Позвонить
+            </a>
+            <a class="lwcf26-contact-btn lwcf26-contact-btn--light" href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C+%D0%A2%D0%B2%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F+%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C+7" target="_blank" rel="noopener noreferrer">
+              Построить маршрут
+            </a>
+          </div>
+        </div>
+        <div class="lwcf26-map" aria-label="Карта">
+          <iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C+%D0%A2%D0%B2%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F+%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C+7&z=16" allowfullscreen="true" title="Карта офиса"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="lwcf26-footer-section">
+    <div class="lwcf26-footer reveal">
+      <div class="lwcf26-wrap">
+        <div class="lwcf26-footer-main">
+
+          <div class="lwcf26-footer-col">
+            <h3 class="lwcf26-footer-title">О компании</h3>
+            <p class="lwcf26-footer-text">Производим и поставляем качественные пиломатериалы с 2013 года. Собственное производство, контроль качества и аккуратная отгрузка для частных и оптовых клиентов.</p>
+            <a class="lwcf26-footer-more" href="/about.html">
+              Подробнее о компании
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div class="lwcf26-socials" aria-label="Мессенджеры">
+              <a class="lwcf26-social-link" href="#vk" aria-label="ВКонтакте">VK</a>
+              <a class="lwcf26-social-link" href="#telegram" aria-label="Telegram">TG</a>
+              <a class="lwcf26-social-link" href="#max" aria-label="MAX">MAX</a>
+              <a class="lwcf26-social-link" href="tel:+70000000000" aria-label="Позвонить">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M6.8 3.7 9 3.2c.9-.2 1.8.3 2.1 1.1l.9 2.2c.3.7.1 1.5-.5 2l-1.1.9c.9 1.9 2.4 3.4 4.2 4.3l1-.9c.6-.5 1.4-.7 2.1-.3l2.1 1c.8.4 1.2 1.2 1 2.1l-.5 2.1c-.2.9-1 1.5-1.9 1.5C10.6 19.2 4.8 13.4 4.8 5.6c0-.9.7-1.7 2-1.9Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="lwcf26-footer-col">
+            <h3 class="lwcf26-footer-title">Каталог</h3>
+            <nav class="lwcf26-footer-links" aria-label="Каталог">
+              <a href="/#catalog">Доска обрезная</a>
+              <a href="/#catalog">Брус</a>
+              <a href="/#catalog">Вагонка</a>
+              <a href="/#catalog">Плита OSB</a>
+              <a href="/#catalog">Террасная доска</a>
+              <a href="/#catalog">Имитация бруса</a>
+              <a href="/#catalog">Все товары →</a>
+            </nav>
+          </div>
+
+          <div class="lwcf26-footer-col">
+            <h3 class="lwcf26-footer-title">Разделы</h3>
+            <nav class="lwcf26-footer-links lwcf26-footer-links--sections" aria-label="Разделы сайта">
+              <a href="/#delivery">Доставка и оплата</a>
+              <a href="/#wholesale">Оптовикам</a>
+              <a href="/#reviews">Отзывы клиентов</a>
+              <a href="/about.html">О компании</a>
+              <a href="/#catalog">Каталог</a>
+              <a href="/#contacts">Контакты</a>
+            </nav>
+          </div>
+
+          <div class="lwcf26-footer-col">
+            <h3 class="lwcf26-footer-title">Контакты</h3>
+            <div class="lwcf26-footer-contact-list">
+              <div class="lwcf26-footer-contact-row">
+                <div class="lwcf26-footer-contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M6.8 3.7 9 3.2c.9-.2 1.8.3 2.1 1.1l.9 2.2c.3.7.1 1.5-.5 2l-1.1.9c.9 1.9 2.4 3.4 4.2 4.3l1-.9c.6-.5 1.4-.7 2.1-.3l2.1 1c.8.4 1.2 1.2 1 2.1l-.5 2.1c-.2.9-1 1.5-1.9 1.5C10.6 19.2 4.8 13.4 4.8 5.6c0-.9.7-1.7 2-1.9Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="lwcf26-footer-contact-data">
+                  <a href="tel:+70000000000">+7 (000) 000-00-00</a>
+                  <span>Ежедневно с 8:00 до 20:00</span>
+                </div>
+              </div>
+              <div class="lwcf26-footer-contact-row">
+                <div class="lwcf26-footer-contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M4 6.5h16v11H4v-11Z" stroke-width="1.8" stroke-linejoin="round"/><path d="m5 7.5 7 5.7 7-5.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="lwcf26-footer-contact-data">
+                  <a href="mailto:info@pilomaterialy.ru">info@pilomaterialy.ru</a>
+                </div>
+              </div>
+              <div class="lwcf26-footer-contact-row">
+                <div class="lwcf26-footer-contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s6.5-5.7 6.5-11.1A6.5 6.5 0 0 0 5.5 9.9C5.5 15.3 12 21 12 21Z" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 12.2a2.4 2.4 0 1 0 0-4.8 2.4 2.4 0 0 0 0 4.8Z" stroke-width="1.8"/></svg>
+                </div>
+                <div class="lwcf26-footer-contact-data">
+                  <span>Москва, Тверская улица, 7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lwcf26-footer-bottom">
+          <div class="lwcf26-copyright">© 2026 Пиломатериалы. Все права защищены.</div>
+          <nav class="lwcf26-footer-bottom-links" aria-label="Юридическая навигация">
+            <a href="#privacy">Политика конфиденциальности</a>
+          </nav>
+          <div class="lwcf26-made">Разработка — <a href="#" rel="noopener noreferrer">aimarkiza.shop</a></div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ SEARCH MODAL -->
+<div id="searchModal" class="overlay-modal" aria-hidden="true" role="dialog" aria-label="Поиск">
+  <div class="search-modal-inner">
+    <div class="search-modal-head">
+      <input type="search" id="searchInput" class="search-input" placeholder="Поиск по товарам..." autocomplete="off" />
+      <button class="modal-close" id="searchClose" aria-label="Закрыть">×</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+  <div class="modal-overlay" data-close="search"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ CART SIDEBAR -->
+<div id="cartSidebar" class="cart-sidebar" aria-hidden="true">
+  <div class="cart-header">
+    <h2>Корзина <span id="cartHeaderCount"></span></h2>
+    <button class="modal-close" id="cartClose" aria-label="Закрыть">×</button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-footer" id="cartFooter"></div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+</div>
+<div class="cart-backdrop" id="cartBackdrop"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ LEAD POPUP -->
+<div id="leadPopup" class="overlay-modal" aria-hidden="true" role="dialog" aria-label="Заявка">
+  <div class="lead-dialog">
+    <button class="modal-close" id="leadClose" aria-label="Закрыть">×</button>
+    <h2 class="lead-title">Оставить заявку</h2>
+    <p class="lead-subtitle" id="leadSubtitle"></p>
+    <form class="lead-form" id="leadForm" novalidate>
+      <input type="hidden" name="source" id="leadSource" value="" />
+      <input type="hidden" name="product" id="leadProduct" value="" />
+      <div class="form-group">
+        <input class="form-field" type="text" name="name" placeholder="Ваше имя" autocomplete="name" required />
+      </div>
+      <div class="form-group">
+        <input class="form-field" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" required />
+      </div>
+      <div class="form-group">
+        <textarea class="form-field" name="comment" placeholder="Комментарий (необязательно)" rows="3"></textarea>
+      </div>
+      <label class="form-policy">
+        <input type="checkbox" name="policy" checked required />
+        <span>Соглашаюсь с <a href="/privacy-policy" target="_blank">политикой конфиденциальности</a></span>
+      </label>
+      <button type="submit" class="btn btn-dark btn-full">Отправить заявку</button>
+      <div class="form-status" id="leadStatus" aria-live="polite"></div>
+    </form>
+  </div>
+  <div class="modal-overlay" data-close="lead"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ COOKIE BANNER -->
+<div id="cookieBanner" class="cookie-banner" role="alertdialog" aria-label="Использование cookie">
+  <p>Мы используем cookie, чтобы сайт работал корректно и становился удобнее для посетителей.</p>
+  <button class="btn btn-dark" id="cookieAccept">Принять</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ TOAST -->
+<div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
