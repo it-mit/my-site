@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     });
-    return r.json();
+    if (!r.ok && r.status === 404) throw new Error('API not found: ' + url);
+    const text = await r.text();
+    try { return JSON.parse(text); } catch { throw new Error('Bad response: ' + text.slice(0, 120)); }
   }
 
   // ─────────────────────────────────────────── TOAST
