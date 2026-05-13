@@ -1,0 +1,99 @@
+[
+  {
+    "id": "board",
+    "section": "catalog",
+    "name": "Доска обрезная",
+    "price": "от 12 500 ₽/м³",
+    "priceNum": 12500,
+    "unit": "м³",
+    "image": "https://static.tildacdn.com/tild3638-6664-4332-b937-376662626539/1_2.png"
+  },
+  {
+    "id": "timber",
+    "section": "catalog",
+    "name": "Брус",
+    "price": "от 14 900 ₽/м³",
+    "priceNum": 14900,
+    "unit": "м³",
+    "image": "https://static.tildacdn.com/tild6661-3334-4331-b130-613033613336/1_3.png"
+  },
+  {
+    "id": "lining",
+    "section": "catalog",
+    "name": "Вагонка",
+    "price": "от 280 ₽/м²",
+    "priceNum": 280,
+    "unit": "м²",
+    "image": "https://static.tildacdn.com/tild6361-6365-4535-b563-363431613834/1_4.png"
+  },
+  {
+    "id": "osb",
+    "section": "catalog",
+    "name": "Плита OSB",
+    "price": "от 650 ₽/лист",
+    "priceNum": 650,
+    "unit": "лист",
+    "image": "https://static.tildacdn.com/tild3432-3432-4630-b065-623631643638/1_5.png"
+  },
+  {
+    "id": "decking",
+    "section": "catalog",
+    "name": "Террасная доска",
+    "price": "от 900 ₽/м²",
+    "priceNum": 900,
+    "unit": "м²",
+    "image": "https://static.tildacdn.com/tild3264-3633-4266-b038-653433336131/1_6.png"
+  },
+  {
+    "id": "board-50-150",
+    "section": "popular",
+    "category": "Обрезная доска",
+    "name": "Обрезная доска 50×150×6000",
+    "shortName": "50×150×6000",
+    "description": "Для каркаса, перекрытий, обрешётки и черновых строительных работ.",
+    "specs": ["Ель / сосна", "Длина 6000 мм", "Шт / м³"],
+    "price": "от 300 ₽ / шт",
+    "priceNum": 300,
+    "unit": "шт",
+    "image": "https://static.tildacdn.com/tild3464-6130-4264-b830-363833386137/___-_2026-05-12T1359.png"
+  },
+  {
+    "id": "timber-100-100",
+    "section": "popular",
+    "category": "Брус",
+    "name": "Брус 100×100×6000",
+    "shortName": "100×100×6000",
+    "description": "Конструкционный материал для лаг, стоек, каркаса и силовых узлов.",
+    "specs": ["Ель / сосна", "Длина 6000 мм", "Шт / м³"],
+    "price": "от 1 150 ₽ / шт",
+    "priceNum": 1150,
+    "unit": "шт",
+    "image": "https://static.tildacdn.com/tild3531-6264-4133-b931-663137396230/_1__1.png"
+  },
+  {
+    "id": "planed-20-140",
+    "section": "popular",
+    "category": "Строганная доска",
+    "name": "Строганная доска 20×140×3000",
+    "shortName": "20×140×3000",
+    "description": "Для чистовой отделки, декоративных элементов, интерьера и аккуратных поверхностей.",
+    "specs": ["Ель / сосна", "Длина 3000 мм", "Шт"],
+    "price": "от 420 ₽ / шт",
+    "priceNum": 420,
+    "unit": "шт",
+    "image": "https://static.tildacdn.com/tild6364-6638-4532-b565-333737366138/___1.png"
+  },
+  {
+    "id": "floor-36-140",
+    "section": "popular",
+    "category": "Половая доска",
+    "name": "Половая доска 36×140×6000",
+    "shortName": "36×140×6000",
+    "description": "Для деревянных полов, настилов, дачных домов и тёплой интерьерной отделки.",
+    "specs": ["Ель / сосна", "Длина 6000 мм", "Шт / м²"],
+    "price": "от 950 ₽ / шт",
+    "priceNum": 950,
+    "unit": "шт",
+    "image": "https://static.tildacdn.com/tild3136-3637-4338-b164-333963373365/__1.png"
+  }
+]

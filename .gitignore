@@ -1,0 +1,5 @@
+node_modules
+.env
+.vercel
+data/leads.json
+_backup_old_tilda_code
